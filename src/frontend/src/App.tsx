@@ -262,7 +262,7 @@ function Navbar({
               scrolled ? "text-charcoal dark:text-white" : "text-white"
             }`}
           >
-            Sunjta Safar
+            Gunjta Safar
           </span>
         </a>
 
@@ -418,7 +418,7 @@ function HeroSection() {
             Welcome to
           </p>
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-4">
-            Sunjta Safar
+            Gunjta Safar
           </h1>
           <p className="text-xl sm:text-2xl text-white/80 font-light italic mb-3">
             Har Safar Ek Kahani
@@ -513,7 +513,7 @@ function AboutSection() {
             </h2>
             <div className="space-y-4 text-foreground/75 leading-relaxed">
               <p>
-                Sunjta Safar was born from a single, simple belief: every
+                Gunjta Safar was born from a single, simple belief: every
                 journey holds a story worth telling. What began as a personal
                 travel journal grew into a community of passionate wanderers,
                 united by their love for discovery and the thrill of the
@@ -881,7 +881,7 @@ function Footer() {
           <div className="flex items-center gap-2 mb-3">
             <MapPin className="w-5 h-5 text-coral" />
             <span className="font-bold text-white text-lg tracking-wide">
-              Sunjta Safar
+              Gunjta Safar
             </span>
           </div>
           <p className="text-sm leading-relaxed text-white/50">
@@ -955,7 +955,7 @@ function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
-          <p>© {year} Sunjta Safar. All rights reserved.</p>
+          <p>© {year} Gunjta Safar. All rights reserved.</p>
           <p>
             Built with ❤️ using{" "}
             <a
