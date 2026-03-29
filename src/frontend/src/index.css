@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Warm sand background */
+    --background: 0.948 0.018 75;
+    --foreground: 0.22 0.02 50;
+    --card: 0.99 0.005 75;
+    --card-foreground: 0.22 0.02 50;
+    --popover: 0.99 0.005 75;
+    --popover-foreground: 0.22 0.02 50;
+    /* Coral/salmon primary */
+    --primary: 0.62 0.14 28;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.92 0.02 75;
+    --secondary-foreground: 0.22 0.02 50;
+    --muted: 0.92 0.015 75;
+    --muted-foreground: 0.55 0.02 60;
+    --accent: 0.92 0.02 75;
+    --accent-foreground: 0.22 0.02 50;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.02 75;
+    --input: 0.88 0.02 75;
+    --ring: 0.62 0.14 28;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.205 0 0;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.97 0 0;
+    --sidebar-accent-foreground: 0.205 0 0;
+    --sidebar-border: 0.922 0 0;
+    --sidebar-ring: 0.708 0 0;
+  }
+
+  .dark {
+    /* Deep navy background */
+    --background: 0.13 0.025 240;
+    --foreground: 0.92 0.01 240;
+    --card: 0.17 0.025 240;
+    --card-foreground: 0.92 0.01 240;
+    --popover: 0.2 0.025 240;
+    --popover-foreground: 0.92 0.01 240;
+    --primary: 0.65 0.14 28;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.22 0.025 240;
+    --secondary-foreground: 0.92 0.01 240;
+    --muted: 0.22 0.025 240;
+    --muted-foreground: 0.65 0.01 240;
+    --accent: 0.25 0.025 240;
+    --accent-foreground: 0.92 0.01 240;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 12%;
+    --ring: 0.65 0.14 28;
+    --chart-1: 0.488 0.243 264.376;
+    --chart-2: 0.696 0.17 162.48;
+    --chart-3: 0.769 0.188 70.08;
+    --chart-4: 0.627 0.265 303.9;
+    --chart-5: 0.645 0.246 16.439;
+    --sidebar: 0.205 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.488 0.243 264.376;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.269 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.439 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+/* Loading spinner */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+/* Gallery masonry */
+.gallery-grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  display: block;
+}
